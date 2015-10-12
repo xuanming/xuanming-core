@@ -47,8 +47,8 @@
 *   Helpers should have scope. Some helpers could only be available in
     their own extension or some specific frames.
 *   Plugin types:
-    1.  Frame. Layout and js. Optional depends on helper. Ember.js is an
-        example of frame.
+    1.  Frame. Route, layout and js. Optional depends on helper.
+        Ember.js is an example of frame.
     2.  Theme. Css and js. Depends on frame.
     3.  Helper.
     4.  Command.
