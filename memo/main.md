@@ -1,10 +1,12 @@
 # Components
 
-1.  Content
+1.  Content.
+    1.  Pages.
+    1.  Site data. Do not put configuration here, only data.
 2.  Appearance
-    1.  Frame. Layout and js
-    2.  Theme. Could be directly from github, or a gem. Theme could have
-        parameters and set in configuration.
+    1.  Frame. Layout and js. How to assemble the contents.
+    2.  Theme. How to show the contents. Could be directly from github,
+        or a gem. Theme could have parameters and set in configuration.
 3.  Plugin
     1.  Functionality. Helper
     2.  Appearance
@@ -25,6 +27,13 @@
     *   middleman rebuild everything. It just compare the files between
         two builds. All actual building operations are executed.
 *   Try to know whether the building of pages in middleman uses rack.
+*   Deploy incrementally. Use something like git to do this. Check the
+    built files between local and remote, and only transfer the
+    difference. This should be an deployment extension. Capistrano may
+    be able to do this.
+*   Data could be dynamic. It could be from database or some web
+    service. Then an incremental deployment will be very useful. The
+    site can periodically be deployed in order to get a dynamic site.
 *   Helper for getting the relative link of a specified page.
 *   Data could have sub directories:
 
@@ -47,10 +56,11 @@
 *   Helpers should have scope. Some helpers could only be available in
     their own extension or some specific frames.
 *   Plugin types:
-    1.  Frame. Route, layout and js. Optional depends on helper.
-        Ember.js is an example of frame.
+    1.  Frame. Route, converter, layout and js. Optional depends on
+        helper. Ember.js is an example of frame.
     2.  Theme. Css and js. Depends on frame.
     3.  Helper.
     4.  Command.
     5.  Converter.
-    6.  Generator. Could be an interactive generator for a specific page.
+    6.  Generator. Could be an interactive generator for a specific
+        page.

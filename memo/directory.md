@@ -7,12 +7,20 @@
     |  |  `- pages
     |  |     |- page1.html.slim
     |  |     `- page2.html.haml
-    |  |- data
+    |  |- image
+    |  |  |- logo.png
+    |  |  `- page1.jpg
+    |  `- data
     |     |- content.yml
     |     `- page.yml
-    |- appearance
+    |- frame
     |  |- layout
     |  |  `- layout.html.erb
+    |  |- route
+    |  |- converter
+    |  `- js
+    |     `- frame.js.coffeescript
+    |- theme
     |  |- image
     |  |- font
     |  |- css

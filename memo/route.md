@@ -10,10 +10,10 @@ Route will build the map from source to destination.
 
 # Route Examples
 
-## One to one
+## One to one with layout
 
     content
-    |- page
+    `- page
       |- index.html
       |- about.html
       |- detail
@@ -40,7 +40,7 @@ Route will build the map from source to destination.
     |     |- day.html
     |     `- week.html
     `- data
-       `- config.yml
+       `- data.yml
 
 Converted to:
 
@@ -83,26 +83,29 @@ Another way to resolve confliction:
        `- week
           `- index.html
 
-User could set configuration in data to select which method to use for
-resolving confliction.
+User could set configuration to select which method to use for resolving
+confliction.
 
 ## Book
 
-    build
-    |- cover.html
-    |- preface.html
-    |- toc.html
-    |- chapter1.html
-    |- chapter2
-    |  |- index.html
-    |  |- section1.html
-    |  `- section2.html
-    |- chapter3.html
-    |- chapter3
-    |  |- section1.html
-    |  `- section2.html
-    |- indice
-    `- copyright.html
+    content
+    |- page
+    |  |- preface.md
+    |  |- chapter1.md
+    |  |- chapter2
+    |  |  |- index.md
+    |  |  |- section1.md
+    |  |  `- section2.md
+    |  |- chapter3.md
+    |  |- chapter3
+    |  |  |- section1.md
+    |  |  `- section2.md
+    |  |- Appendix1.md
+    |  |- Appendix2.md
+    |  `- copyright.md
+    `- data
+       |- toc.yml
+       `- data.yml
 
     build
     |- cover.html
@@ -117,7 +120,33 @@ resolving confliction.
     |- chapter3
     |  |- section1.html
     |  `- section2.html
-    |- indice
+    |- index.html
     `- copyright.html
 
 ## Blog
+
+    content
+    |- page
+    |  |- 2015-10-24-blog1.md
+    |  |- 2015-10-24-blog2.md
+    |  |- 2015-10-18-blog3.md
+    |  `- 2014-12-03-blog4.md
+    `- data
+       `- data.yml
+
+    build
+    |- index.html
+    |- list.html
+    |- tag.html
+    `- blog
+       |- 2015
+       |  `- 10
+       |     |- 24
+       |     |  |- blog1.html
+       |     |  `- blog2.html
+       |     `- 18
+       |        `- blog3.html
+       `- 2014
+          `- 12
+             `- 03
+                `- blog4.html
