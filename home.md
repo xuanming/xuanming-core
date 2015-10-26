@@ -1,9 +1,9 @@
-[Readme](wikis/README)
+[Readme](README)
 
 # Memo
 
-1.  [Main](wikis/memo/main)
-2.  [Process](wikis/memo/process)
-3.  [Directory](wikis/memo/directory)
-4.  [Route](wikis/memo/route)
-5.  [Reference](wikis/memo/ref)
+1.  [Main](memo/main)
+2.  [Process](memo/process)
+3.  [Directory](memo/directory)
+4.  [Route](memo/route)
+5.  [Reference](memo/ref)
