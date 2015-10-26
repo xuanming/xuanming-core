@@ -12,6 +12,15 @@
     2.  Appearance
     3.  Command
 
+# Components2
+
+1.  Data source (page, data, REST)
+    * Common data. Global data
+    * Page specific data
+2.  Data type
+3.  Route
+4.  Converter
+
 
 # General
 
@@ -19,6 +28,7 @@
     ember.js frame. But the page route is different from traditional
     static pages. Some kind of pages should not be converted in the
     building process.
+*   Convert to html/json/xml/... Could provide static API.
 *   There will be `/_config` and `/_sitemap` pages. The use of js and
     css for these pages should be similar with ordinary pages. These
     pages are ignored in the building by default.
