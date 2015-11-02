@@ -59,12 +59,15 @@
         `- page.yml
 
     The data could be retrieved by data.theme.blog, data.disqus.url.
+*   For the book extension, make reader view in firefox available.
 *   Theme only contains js and css, not layout. The frame will
     include the layout and some helpers. A frame may come with
     some predefined themes in it. So a theme should depend on certain
     frame. 
 *   Helpers should have scope. Some helpers could only be available in
     their own extension or some specific frames.
+*   Modules in extensions should have their own configuraion, which
+    could be listed in the command.
 *   Plugin types:
     1.  Frame. Route, converter, layout and js. Optional depends on
         helper. Ember.js is an example of frame.
