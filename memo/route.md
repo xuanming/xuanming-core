@@ -107,6 +107,29 @@ confliction.
        |- toc.yml
        `- data.yml
 
+Or just put the toc with the pages:
+
+    content
+    |- page
+    |  |- toc.yml
+    |  |- preface.md
+    |  |- chapter1.md
+    |  |- chapter2
+    |  |  |- toc.yml
+    |  |  |- index.md
+    |  |  |- section1.md
+    |  |  `- section2.md
+    |  |- chapter3.md
+    |  |- chapter3
+    |  |  |- toc.yml
+    |  |  |- section1.md
+    |  |  `- section2.md
+    |  |- Appendix1.md
+    |  |- Appendix2.md
+    |  `- copyright.md
+    `- data
+       `- data.yml
+
     build
     |- cover.html
     |- preface.html
