@@ -8,7 +8,9 @@
     4.  freeze console
     5.  freeze generate, generate source files
     6.  freeze build
-    7.  freeze help
+    7.  freeze plugin, operation about available plugins
+    8.  freeze subcmd
+    9.  freeze help, this should be built-in feature for freeze command
 3.  freeze-converter-tilt
 4.  freeze-route-direct
 5.  freeze-datasource-data
@@ -21,7 +23,7 @@
 
 1.  Content.
     1.  Pages.
-    1.  Site data. Do not put configuration here, only data.
+    2.  Site data. Do not put configuration here, only data.
 2.  Appearance
     1.  Frame. Layout and js. How to assemble the contents.
     2.  Theme. How to show the contents. Could be directly from github,
@@ -96,3 +98,23 @@
     5.  Converter.
     6.  Generator. Could be an interactive generator for a specific
         page.
+*   Commands should have default subcommand. Each action should be a
+    command. Options should be description for the action.
+
+        freeze server start
+        freeze server             # default to freeze server start
+        freeze                    # default to freeze server, and then default to freeze server start
+        freeze plugin list-all
+        freeze plugin list        # list all imported plugins
+
+*   Command plugins.
+    1.  freeze generate
+
+*   The plugin for host all the available plugins. Provide the
+    `freeze plugin list-all` command.
+    Create a static site for keeping all the plugins' metadata.
+    Could get all available plugins with API from this static site.
+    Developers could send pull request to github and new plugin
+    will be automatically added. This plugin will also decide the
+    source of plugin, so only the plugin name is needed in the
+    configuration.
