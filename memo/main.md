@@ -37,11 +37,43 @@
 # Components2
 
 1.  Data source (page, data, REST)
-    * Common data. Global data
-    * Page specific data
+    *   Common data. Global data
+    *   Page specific data
 2.  Data type
 3.  Route
 4.  Converter
+
+# Components3
+
+Data should be devided into:
+
+1.  Source. Where to get the data, file system or internet
+2.  Type. Markdown, yaml, erb
+3.  Converter. Determined by type and source (file from cdn do not
+    need to be converted)
+
+Data sources:
+
+1.  File system
+2.  Internet. CDN, REST, external link
+
+Data types:
+
+1.  Page
+    *   Markdown, slim, haml, erb
+2.  Data
+    *   Yaml, json
+3.  Javascript
+4.  CSS
+5.  Image
+6.  Layout
+    *   erb, haml, slim
+7.  Header
+    *   erb, haml, slim
+8.  Footer
+    *   erb, haml, slim
+
+Data source
 
 
 # General
