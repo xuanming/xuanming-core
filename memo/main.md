@@ -8,6 +8,7 @@
     4.  freeze console
     5.  freeze generate, generate source files
     6.  freeze build
+    6.  freeze show config/sitemap
     7.  freeze plugin, operation about available plugins
     8.  freeze subcmd
     9.  freeze help, this should be built-in feature for freeze command
@@ -49,6 +50,8 @@
     ember.js frame. But the page route is different from traditional
     static pages. Some kind of pages should not be converted in the
     building process.
+*   Provide the ability to generate a single page. This will be useful
+    for a book, which could be directly converted to pdf.
 *   Convert to html/json/xml/... Could provide static API.
 *   There will be `/_config` and `/_sitemap` pages. The use of js and
     css for these pages should be similar with ordinary pages. These
@@ -118,3 +121,5 @@
     will be automatically added. This plugin will also decide the
     source of plugin, so only the plugin name is needed in the
     configuration.
+*   Configuration comes from default, config file and command options,
+    with the priority from low to high.
