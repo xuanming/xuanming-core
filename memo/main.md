@@ -8,7 +8,7 @@
     4.  freeze console
     5.  freeze generate, generate source files
     6.  freeze build
-    6.  freeze show config/sitemap
+    6.  freeze show config/sitemap/metadata/toc/blog/data/content/allpage
     7.  freeze plugin, operation about available plugins
     8.  freeze subcmd
     9.  freeze help, this should be built-in feature for freeze command
@@ -73,7 +73,50 @@ Data types:
 8.  Footer
     *   erb, haml, slim
 
-Data source
+Converter:
+
+1.  Directly copy
+2.  erb
+3.  Markdown -> html
+4.  haml, slim
+5.  coffeescript
+6.  sass, scss
+7.  html -> pdf
+8.  yaml -> json
+9.  json -> yaml
+
+Route sources:
+
+1.  All html, erb, md, slim, haml.
+2.  js/css. This is optional because the needed js/css will be
+    automatically included in the above resource. But if you would like
+    to add some js/css which is not used by any page, this could be
+    useful.
+3.  YAML.
+4.  REST api resource list.
+
+Dependency:
+
+    html -> layout.erb -> data global -> data.yml
+                       -> data page   -> content1.md (front matter)
+                                      -> content2.md.erb (front matter)
+                       -> header      -> header.erb    -> data global -> data.yml
+                                                       -> data page   -> ...
+                       -> content 1   -> content1 markdown -> content1.md
+                       -> content 2   -> content2 markdown -> content2 erb -> content2.md.erb
+    js   -> app.js  -> app.js.coffeescript -> data global -> data.yml
+    css  -> app.css -> app.css.sass        -> data global -> data.yml
+    pdf  -> html -> layout_single.erb -> data
+         -> js   -> ...
+         -> css  -> ...
+    json -> data -> data.yml
+    toc  -> all toc data -> all toc.yml
+         -> all page data -> all content.md
+
+Use topological sorting to solve the dependency.
+
+Data could be in memory or file. File data should send the filename to
+converter, like copying file.
 
 
 # General
@@ -85,6 +128,7 @@ Data source
 *   Provide the ability to generate a single page. This will be useful
     for a book, which could be directly converted to pdf.
 *   Convert to html/json/xml/... Could provide static API.
+*   Convert latex to images.
 *   There will be `/_config` and `/_sitemap` pages. The use of js and
     css for these pages should be similar with ordinary pages. These
     pages are ignored in the building by default.
@@ -120,6 +164,9 @@ Data source
     include the layout and some helpers. A frame may come with
     some predefined themes in it. So a theme should depend on certain
     frame. 
+*   Import of js and css should be included with helper. The helper
+    can be both used for local and cdn resources. It could accept
+    a hash (version and min) as arguments.
 *   Helpers should have scope. Some helpers could only be available in
     their own extension or some specific frames.
 *   Modules in extensions should have their own configuraion, which
