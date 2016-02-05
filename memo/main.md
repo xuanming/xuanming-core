@@ -171,6 +171,8 @@ converter, like copying file.
     their own extension or some specific frames.
 *   Modules in extensions should have their own configuraion, which
     could be listed in the command.
+*   Setup a `default.yml` file for the default configuraion in the
+    extension. Do not write any default configuraion in the program.
 *   Plugin types:
     1.  Frame. Route, converter, layout and js. Optional depends on
         helper. Ember.js is an example of frame.
