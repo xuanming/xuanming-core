@@ -1,24 +1,24 @@
 # Packages
 
-1.  freeze
-2.  freeze-cli
-    1.  freeze new
-    2.  freeze install, install required components
-    3.  freeze server
-    4.  freeze console
-    5.  freeze generate, generate source files
-    6.  freeze build
-    6.  freeze show config/sitemap/metadata/toc/blog/data/content/allpage
-    7.  freeze plugin, operation about available plugins
-    8.  freeze subcmd
-    9.  freeze help, this should be built-in feature for freeze command
-3.  freeze-converter-tilt
-4.  freeze-route-direct
-5.  freeze-datasource-data
-6.  freeze-datasource-direct
-7.  freeze-datasource-helper
-8.  freeze-theme-bootstrap
-9.  freeze-book, include converter of toc, datasource of toc, some themes
+1.  xuanming
+2.  xuanming-cli
+    1.  xuanming new
+    2.  xuanming install, install required components
+    3.  xuanming server
+    4.  xuanming console
+    5.  xuanming generate, generate source files
+    6.  xuanming build
+    6.  xuanming show config/sitemap/metadata/toc/blog/data/content/allpage
+    7.  xuanming plugin, operation about available plugins
+    8.  xuanming subcmd
+    9.  xuanming help, this should be built-in feature for xuanming command
+3.  xuanming-converter-tilt
+4.  xuanming-route-direct
+5.  xuanming-datasource-data
+6.  xuanming-datasource-direct
+7.  xuanming-datasource-helper
+8.  xuanming-theme-bootstrap
+9.  xuanming-book, include converter of toc, datasource of toc, some themes
 
 # Components
 
@@ -185,17 +185,17 @@ converter, like copying file.
 *   Commands should have default subcommand. Each action should be a
     command. Options should be description for the action.
 
-        freeze server start
-        freeze server             # default to freeze server start
-        freeze                    # default to freeze server, and then default to freeze server start
-        freeze plugin list-all
-        freeze plugin list        # list all imported plugins
+        xuanming server start
+        xuanming server             # default to xuanming server start
+        xuanming                    # default to xuanming server, and then default to xuanming server start
+        xuanming plugin list-all
+        xuanming plugin list        # list all imported plugins
 
 *   Command plugins.
-    1.  freeze generate
+    1.  xuanming generate
 
 *   The plugin for host all the available plugins. Provide the
-    `freeze plugin list-all` command.
+    `xuanming plugin list-all` command.
     Create a static site for keeping all the plugins' metadata.
     Could get all available plugins with API from this static site.
     Developers could send pull request to github and new plugin
