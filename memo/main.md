@@ -145,6 +145,8 @@ converter, like copying file.
     service. Then an incremental deployment will be very useful. The
     site can periodically be deployed in order to get a dynamic site.
 *   Helper for getting the relative link of a specified page.
+*   External link should be opened in new window. This could be done by
+    js.
 *   Data could have sub directories:
 
         data
