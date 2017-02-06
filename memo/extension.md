@@ -3,6 +3,9 @@
 Find out a way to write footnote/citing in markdown, like
 <https://www.railstutorial.org/book>.
 
+Considering use [Asciidoctor](http://asciidoctor.org/).
+Try to make multiple language translation easy in a single project.
+
 
 # Resume
 
