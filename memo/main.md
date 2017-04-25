@@ -208,3 +208,5 @@ converter, like copying file.
     with the priority from low to high.
 *   A plugin to make the site searchable. Build the index of all the
     keywords and use js to read the index.
+*   Parameters should be data, not configuration. Because different
+    parmeters could incur different result.
